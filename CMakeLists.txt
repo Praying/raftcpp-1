@@ -42,9 +42,6 @@ ADD_LIBRARY(node_lib src/node/node.cc)
 ADD_DEPENDENCIES(node_lib asio_ep rest_rpc_ep common_lib)
 TARGET_LINK_LIBRARIES(node_lib common_lib)
 
-
-#RAFTCPP_DEFINE_TEST( test_memory_log_store  FILE ests/memory_log_store_test.cpp DEP rest_rpc_ep doctest_ep LINK pthread)
-
 # Test targets
 if(UNIX)
 	set(link_libs pthread)
